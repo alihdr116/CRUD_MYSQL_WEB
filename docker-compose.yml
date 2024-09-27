@@ -35,7 +35,7 @@ services:
       - '3333:3306'                   # Map local port 3333 to the MySQL container's port 3306
     volumes:
       - mysql-data:/var/lib/mysql      # Persist MySQL data
-      - ./path/to/your/init.sql:/docker-entrypoint-initdb.d/init.sql  # Mount init.sql
+      - ./initdb/init.sql:/docker-entrypoint-initdb.d/init.sql  # Mount init.sql
     healthcheck:
       test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
       interval: 10s
