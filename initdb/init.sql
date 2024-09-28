@@ -1,10 +1,10 @@
-CREATE DATABASE IF NOT EXISTS crudmysql;
-
 CREATE USER 'ali'@'%' IDENTIFIED BY 'root';
 
 GRANT ALL PRIVILEGES ON crudmysql.* TO 'ali'@'%';
 
 FLUSH PRIVILEGES;
+
+CREATE DATABASE IF NOT EXISTS crudmysql;
 
 USE crudmysql;
 
